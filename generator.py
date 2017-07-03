@@ -11,12 +11,10 @@ def load_includes(impl_t):
     if impl_t in conf:
       for incl in conf[impl_t]:
         result += '#include "' + incl + '"\n'
-    print(result)
     return result
 
 def write_pybind11_module(impl_t):
   with open('bindings.cc', 'w') as module:
-    print(impl_t)
     module.write('#include "bindings.h"\n')
     module.write(load_includes(impl_t))
     module.write('\n')
