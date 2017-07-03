@@ -1,0 +1,4 @@
+{
+  "ImplA": ["impl_a.h"],
+  "ImplB": ["impl_b.h"]
+}
